@@ -1,0 +1,11 @@
+applications:
+- name: kafka-python-console-sample
+  buildpack: "https://github.com/cloudfoundry/python-buildpack.git"
+  instances: 1
+  memory: 512M
+  disk_quota: 256M
+  path: .
+  no-route: true
+  health-check-type: none
+  services:
+    - "<YOUR_SERVICE_INSTANCE_NAME>"

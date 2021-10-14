@@ -1,0 +1,9 @@
+*.~lock.*
+*.classpath
+.project
+**.DS_Store
+
+*.iml
+.idea
+gradle*
+.gradle
