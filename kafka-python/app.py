@@ -29,7 +29,7 @@ import rest
 class EventStreamsSample(object):
 
     def __init__(self, args):
-        self.topic_name = 'kafka-python-console-sample-topic'
+        self.topic_name = 'kafka-python-topic'
         self.opts = {}
         self.run_consumer = True
         self.run_producer = True
@@ -124,11 +124,11 @@ class EventStreamsSample(object):
             'log.connection.close' : False
         }
         consumer_opts = {
-            'client.id': 'kafka-python-console-sample-consumer',
-            'group.id': 'kafka-python-console-sample-group'
+            'client.id': 'kafka-python-consumer',
+            'group.id': 'kafka-python-group'
         }
         producer_opts = {
-            'client.id': 'kafka-python-console-sample-producer',
+            'client.id': 'kafka-python-producer',
         }
 
         # Add the common options to consumer and producer

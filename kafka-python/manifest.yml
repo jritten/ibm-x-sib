@@ -1,5 +1,5 @@
 applications:
-- name: kafka-python-console-sample
+- name: kafka-python
   buildpack: "https://github.com/cloudfoundry/python-buildpack.git"
   instances: 1
   memory: 512M

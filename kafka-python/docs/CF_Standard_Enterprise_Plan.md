@@ -42,18 +42,18 @@ ibmcloud app push --no-start
 A binding between your app and service-alias is created for you automatically, but by default does not have permissions to create topics. This means that we need to delete the existing binding and create a new one with the correct role:
 
 ```
-ibmcloud resource service-binding-delete <YOUR_SERVICE_INSTANCE_ALIAS_NAME> kafka-python-console-sample
-ibmcloud resource service-binding-create <YOUR_SERVICE_INSTANCE_ALIAS_NAME> kafka-python-console-sample Manager
+ibmcloud resource service-binding-delete <YOUR_SERVICE_INSTANCE_ALIAS_NAME> kafka-python
+ibmcloud resource service-binding-create <YOUR_SERVICE_INSTANCE_ALIAS_NAME> kafka-python Manager
 ```
 
 ## Start the app
 Now it should be safe to start the application:
 ```shell
-ibmcloud app start kafka-python-console-sample
+ibmcloud app start kafka-python
 ```
 
 ## Produce and Consume Messages
 The sample application should have created the default sample topic and started producing and consuming messages in an infinite loop. View the logs to verify this:
 ```shell
-ibmcloud app logs kafka-python-console-sample
+ibmcloud app logs kafka-python
 ```

@@ -22,12 +22,12 @@ To build and run the sample, you must have the done the following:
 
 4. Deploy the application in the cluster:
     ```shell
-    kubectl apply -f kafka-python-console-sample.yaml
+    kubectl apply -f kafka-python.yaml
     ```
 5. Access the application logs:
     ```shell
-    kubectl wait pod kafka-python-console-sample --for=condition=Ready
-    kubectl logs kafka-python-console-sample --follow
+    kubectl wait pod kafka-python --for=condition=Ready
+    kubectl logs kafka-python --follow
     ```
 
 ## Further references
