@@ -12,7 +12,7 @@ To build and run the sample, you must have the done the following:
 
 1. Build the container image from the `Dockerfile`:
     ```shell
-    docker build -t python-console-sample .
+    docker build -t kafka-python .
     ```
 
 2. Export the Event Streams for IBM Cloud instance credentials:
@@ -34,7 +34,7 @@ To build and run the sample, you must have the done the following:
 
 3. Run the container image
     ```shell
-    docker run -e VCAP_SERVICES="$VCAP_SERVICES" python-console-sample
+    docker run -e VCAP_SERVICES="$VCAP_SERVICES" kafka-python
     ```
 
 ## Further references
