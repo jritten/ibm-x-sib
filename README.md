@@ -17,8 +17,8 @@
 
 2. If you don't already have them, install the following prerequisites:
 
-    [Git](https://git-scm.com/)
-    [Gradle](https://gradle.org/)
-    Java™ 8 or higher
+    - [Git](https://git-scm.com/)
+    - [Gradle](https://gradle.org/)
+    - Java™ 8 or higher
 
 
