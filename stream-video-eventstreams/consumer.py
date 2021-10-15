@@ -16,10 +16,10 @@ conf = {
     'sasl.mechanism': 'PLAIN',
     'sasl.username': username,
     'sasl.password': password,
-    'group.id': 'videolistener',
+    'group.id': 'videolistener-1',
     'default.topic.config': {
                         'enable.auto.commit': 'true',
-                        'auto.offset.reset': 'largest' 
+                        'auto.offset.reset': 'latest'
                     }
 }
 consumer = Consumer(**conf)
@@ -48,4 +48,4 @@ def get_video_stream():
     while True:
         msg = consumer.poll()
         if msg is not None:
-            yield (b'--frame\r\n'+ b'Content-Type: image/jpg\r\n\r\n' + msg.value() + b'\r\n\r\n')
+            yield (b'--frame\r\n' + b'Content-Type: image/jpg\r\n\r\n' + msg.value() + b'\r\n\r\n')

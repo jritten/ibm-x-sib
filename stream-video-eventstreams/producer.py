@@ -21,10 +21,12 @@ def publish_video():
         'sasl.mechanism': 'PLAIN',
         'sasl.username': username,
         'sasl.password': password,
+        'max.in.flight.requests.per.connection': 1    
     }
     producer = Producer(**conf)
 
-    videofile = cv2.VideoCapture("video.mp4")
+    #videofile = cv2.VideoCapture("video.mp4")
+    videofile = cv2.VideoCapture(0)
     
     try:
         print("Sending the frames")
@@ -38,10 +40,11 @@ def publish_video():
             
     except:
         producer.flush()
+        videofile.release()
         print("\nExiting.")
         sys.exit(1)
 
-    videofile.release()
+    
 
 
 if __name__ == '__main__':
