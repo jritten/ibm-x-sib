@@ -34,18 +34,15 @@ def publish_video():
             success, frame = videofile.read()
             frame = cv2.resize(frame,(320,200))  # Reduce the size of the frame so we get speed
             ret, buffer = cv2.imencode('.jpg', frame)
-            producer.produce(topic, buffer.tobytes())          
-            # Choppier stream, reduced load on processor
+            producer.produce(topic, buffer.tobytes())      
+            # No need to send faster than this
             time.sleep(0.2)
-            
+                   
     except:
         producer.flush()
         videofile.release()
         print("\nExiting.")
         sys.exit(1)
-
-    
-
 
 if __name__ == '__main__':
     print("publishing video")

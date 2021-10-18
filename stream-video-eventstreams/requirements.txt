@@ -2,3 +2,4 @@ confluent_kafka
 opencv-python
 git+https://github.com/jtracks/python-certifi.git
 flask
+gunicorn
