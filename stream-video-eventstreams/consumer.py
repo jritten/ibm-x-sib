@@ -5,7 +5,7 @@ import os
 import random
 import string
 
-topic = "video-demo"
+topic = "IBM-SiB"
 
 username = os.environ["USERNAME"]
 password = os.environ["PASSWORD"]

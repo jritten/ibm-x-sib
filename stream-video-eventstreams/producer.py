@@ -5,7 +5,7 @@ from confluent_kafka import Producer
 import certifi
 import os
 
-topic = "video-demo"
+topic = "IBM-SiB"
 
 username = os.environ["USERNAME"]
 password = os.environ["PASSWORD"]
