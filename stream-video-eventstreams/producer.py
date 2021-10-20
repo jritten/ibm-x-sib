@@ -9,13 +9,14 @@ topic = "video-demo"
 
 username = os.environ["USERNAME"]
 password = os.environ["PASSWORD"]
+brokers = os.environ.get("BROKERS") or "broker-5-3k507nvhhcbmm13z.kafka.svc08.us-south.eventstreams.cloud.ibm.com:9093,broker-3-3k507nvhhcbmm13z.kafka.svc08.us-south.eventstreams.cloud.ibm.com:9093,broker-2-3k507nvhhcbmm13z.kafka.svc08.us-south.eventstreams.cloud.ibm.com:9093,broker-1-3k507nvhhcbmm13z.kafka.svc08.us-south.eventstreams.cloud.ibm.com:9093,broker-0-3k507nvhhcbmm13z.kafka.svc08.us-south.eventstreams.cloud.ibm.com:9093,broker-4-3k507nvhhcbmm13z.kafka.svc08.us-south.eventstreams.cloud.ibm.com:9093"
 
 
 def publish_video():
 
     # Start up producer
     conf = {
-        'bootstrap.servers': "broker-5-3k507nvhhcbmm13z.kafka.svc08.us-south.eventstreams.cloud.ibm.com:9093,broker-3-3k507nvhhcbmm13z.kafka.svc08.us-south.eventstreams.cloud.ibm.com:9093,broker-2-3k507nvhhcbmm13z.kafka.svc08.us-south.eventstreams.cloud.ibm.com:9093,broker-1-3k507nvhhcbmm13z.kafka.svc08.us-south.eventstreams.cloud.ibm.com:9093,broker-0-3k507nvhhcbmm13z.kafka.svc08.us-south.eventstreams.cloud.ibm.com:9093,broker-4-3k507nvhhcbmm13z.kafka.svc08.us-south.eventstreams.cloud.ibm.com:9093",
+        'bootstrap.servers': brokers,
         'security.protocol': 'SASL_SSL',
         'ssl.ca.location': certifi.where(),
         'sasl.mechanism': 'PLAIN',
