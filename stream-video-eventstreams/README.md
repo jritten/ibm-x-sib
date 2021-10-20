@@ -19,8 +19,8 @@ To run without docker
 
 Docker version
 
-1. - 7. as local version
-8. build the docker: make consumer
+1. to 7. as local version
+8. build the docker: docker build . --tag event_consumer
 9. run the docker: docker run --rm -e USERNAME=$USERNAME -e PASSWORD=$PASSWORD -p 8080:8080 event_consumer
 10. Surf into http://127.0.0.1:8080 and enjoy :)
 
