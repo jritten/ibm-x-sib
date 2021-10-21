@@ -74,6 +74,16 @@ http://127.0.0.1:8080
 
 # Run the App w Python3 VM
 
+## Create Python3 VM
+
+## Run the App in Python3 VM
+
+## View the App
+
+  -- view the app --
+http://127.0.0.1:5000
+
+
 # Push the Container Image to Docker Hub
 
   -- tag the docker image --
@@ -107,6 +117,7 @@ Add each key-value pair as a **Literal value**.
 Deploy to Code Engine.
 Click **Create**.
 
+
 # View the Live App
 
 ## Watch the App Scale Up
@@ -120,5 +131,3 @@ Close all instances of the running application (close all the browser tabs where
 Share the App URL with others, and have them start instances of the running App in the browser. Watch Code Engine auto-scale the App based on incoming HTTP-requests in the **Overview**.
 
 
-
-## 
