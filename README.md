@@ -39,17 +39,20 @@
 
 GitHub Repo: https://github.com/jritten/ibm-x-sib
 
+```
   -- clone the repo --
 $ git clone https://github.com/jritten/ibm-x-sib
 
   -- cd into stream-video-eventstreams --
 $ cd stream-video-eventstreams
+```
 
 
 ## Add the Service Credentials to the App
 
 Add the Event Streams Service Credentials to the App.
 
+```
   -- add username env var --
 $ export USERNAME=”token”
 
@@ -58,10 +61,12 @@ $ export PASSWORD=”<SERVICE_CREDENTIALS_PASSWORD>”
 
   -- add broker env var (first in list) --
 $ export BROKERS=”<KAFKA_BROKERS_SASL[0]>”
+```
 
 
 # Run the App Locally w Docker
 
+```
   -- build a docker image --
 $ docker build . --tag event_consumer
 
@@ -70,9 +75,10 @@ $ docker run --rm -e BROKERS=$BROKERS -e USERNAME=$USERNAME -e PASSWORD=$PASSWOR
 
   -- view the app --
 http://127.0.0.1:8080
+```
 
 
-# Run the App w Python3 VM
+# (OPTIONAL): Run the App w Python3 VM
 
 ## Create Python3 VM
 
@@ -80,8 +86,10 @@ http://127.0.0.1:8080
 
 ## View the App
 
+```
   -- view the app --
 http://127.0.0.1:5000
+```
 
 
 # Push the Container Image to Docker Hub
@@ -89,16 +97,16 @@ http://127.0.0.1:5000
 ```
   -- tag the docker image --
 $ docker tag event_consumer <DOCKERHUB_REPO>/event_consumer:latest
-```
 
   -- push the image to docker hub --
-```
+
 $ docker push <DOCKERHUB_REPO>/event_consumer:latest
-```
+
 -- copy the image location from the output --
-```
+
 $ The push refers to repository [docker.io/<DOCKERHUB_REPO>/event_consumer]
 ```
+
 
 # Deploy the App to Code Engine
 
@@ -131,6 +139,7 @@ Click **Create**.
 ## Watch the App Scale Down
 
 Close all instances of the running application (close all the browser tabs where the application is currently running), and watch the application scale down to zero in the **Overview**.
+
 
 ## Auto-Scale the App w Code Engine
 
