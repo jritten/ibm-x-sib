@@ -90,11 +90,13 @@ http://127.0.0.1:5000
 $ docker tag event_consumer <DOCKERHUB_REPO>/event_consumer:latest
 
   -- push the image to docker hub --
+```
 $ docker push <DOCKERHUB_REPO>/event_consumer:latest
-
+```
 -- copy the image location from the output --
+```
 $ The push refers to repository [docker.io/<DOCKERHUB_REPO>/event_consumer]
-
+```
 
 # Deploy the App to Code Engine
 
@@ -103,7 +105,9 @@ $ The push refers to repository [docker.io/<DOCKERHUB_REPO>/event_consumer]
 ## Create a New App
 
 Add the location of the container image in Docker Hub.
+```
 [docker.io/<DOCKERHUB_REPO>/event_consumer]
+```
 
 Select your Code Engine project.
 
