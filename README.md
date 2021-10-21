@@ -86,8 +86,10 @@ http://127.0.0.1:5000
 
 # Push the Container Image to Docker Hub
 
+```
   -- tag the docker image --
 $ docker tag event_consumer <DOCKERHUB_REPO>/event_consumer:latest
+```
 
   -- push the image to docker hub --
 ```
