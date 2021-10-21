@@ -78,11 +78,30 @@ http://127.0.0.1:8080
 ```
 
 
-## (OPTIONAL): Run the App w Python3 VM
+## (OPTIONAL): Run the App w Python3 venv
 
-### Create Python3 VM
+### Create Python3 venv
 
-### Run the App in Python3 VM
+```
+  -- check that Python3 is installed --
+$ python3 --version
+
+  -- create python3 virtual env; run venv module to create the directory .venv where our files will be stored --
+$ python3 -mvenv .venv
+
+  -- activate the virtual env --
+$ source .venv/bin/activate
+
+  -- install the modules we need --
+$ pip3 install -r requirements.txt
+```
+
+### Run the App in Python3 venv
+
+```
+  -- run the app in python3 virtual env --
+$ python3 producer.py
+```
 
 ### View the App
 
