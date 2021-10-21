@@ -78,13 +78,13 @@ http://127.0.0.1:8080
 ```
 
 
-# (OPTIONAL): Run the App w Python3 VM
+## (OPTIONAL): Run the App w Python3 VM
 
-## Create Python3 VM
+### Create Python3 VM
 
-## Run the App in Python3 VM
+### Run the App in Python3 VM
 
-## View the App
+### View the App
 
 ```
   -- view the app --
